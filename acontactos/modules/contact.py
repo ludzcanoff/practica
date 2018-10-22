@@ -5,7 +5,7 @@ import csv
 from mc import *
 
 
-def loop():
+def loop1():
     otro = raw_input('\n(1) para añadir otro contacto, o (0) para volver al menú principal: ')
     if otro == '0':
         if os.name == 'posix':
@@ -18,6 +18,19 @@ def loop():
             editarcsv()
         else:
             print('No deberías haber podido llegar aquí. Felicitaciones!')
+    else:
+        error()
+        loop1()
+
+
+def loop2():
+    otro = raw_input('\n(1) para añadir otro contacto, o (0) para volver al menú principal: ')
+    if otro == '0':
+        if os.name == 'posix':
+            os.system('sleep 0')
+        if os.name == 'nt':
+            os.system('timeout 0 >nul')
+    elif otro == '1':
         existe = os.path.isfile('contactos')
         if existe is True:
             editar()
@@ -25,7 +38,7 @@ def loop():
             print('No deberías haber podido llegar aquí. Felicitaciones!')
     else:
         error()
-        loop()
+        loop2()
 
 
 def editarcsv():
@@ -38,7 +51,7 @@ def editarcsv():
     email = raw_input('\nIngrese su dirección de correo electrónico: ')
     archivo = csv.writer(open('contactos.csv', 'ab'))
     archivo.writerow([nombre, apellido, telefono, email])
-    loop()
+    loop1()
 
 
 def visualizarcsv():
@@ -75,7 +88,7 @@ def editar():
     email = raw_input('\nIngrese su dirección de correo electrónico: ')
     archivo = csv.writer(open('contactos', 'ab'))
     archivo.writerow([nombre, apellido, telefono, email])
-    loop()
+    loop2()
 
 
 def visualizar():
