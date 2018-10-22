@@ -23,11 +23,9 @@ def slp():
 
 
 def intro():
-    print('''\n╔══════════════════════════╗\n║ADMINISTRADOR DE CONTACTOS║
-╚══════════════════════════╝
-┌────────────────────────┐\n│Joaquín Ludzcanoff, 2018│
-└────────────────────────┘
-''')
+    print('''\n╔══════════════════════════╗                          ┌────────────────────────┐
+║ADMINISTRADOR DE CONTACTOS║                          │Joaquín Ludzcanoff, 2018│
+╚══════════════════════════╝                          └────────────────────────┘''')
 
 
 def firstrun():
@@ -39,28 +37,28 @@ def firstrun():
     if existe is False:
         clr()
         intro()
-        print('''\n╔═══════════════════════════════════════════════════════════╗
-║           ¡ARCHIVO DE CONTACTOS NO ENCONTRADO!            ║
-║     No podrá visualizar archivos hasta que genere uno     ║
-║El archivo se generará automáticamente al añadir contactos.║
-╚═══════════════════════════════════════════════════════════╝''')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                     ¡ARCHIVO DE CONTACTOS NO ENCONTRADO!                     ║
+║              No podrá visualizar archivos hasta que genere uno               ║
+║          El archivo se generará automáticamente al añadir contactos.         ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
     existecsv = os.path.isfile('contactos.csv')
     if existecsv is True:
         slp()
     if existecsv is False:
-        print('''\n╔══════════════════════════════════════════════════════════════════════════════════╗
-║                     ¡ARCHIVO DE CONTACTOS CSV NO ENCONTRADO!                     ║
-║                No podrá visualizar archivos hasta que genere uno                 ║
-║  El archivo se generará automáticamente al añadir contactos a un archivo *.csv.  ║
-╚══════════════════════════════════════════════════════════════════════════════════╝''')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                   ¡ARCHIVO DE CONTACTOS CSV NO ENCONTRADO!                   ║
+║              No podrá visualizar archivos hasta que genere uno               ║
+║El archivo se generará automáticamente al añadir contactos a un archivo *.csv.║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
         slp()
 
 
 def error():
     clr()
-    print('''\n╔══════════════════════════════════════╗
-║¡La opción seleccionada es incorrecta!║
-╚══════════════════════════════════════╝''')
+    print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ¡La opción seleccionada es incorrecta!                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
     slp()
     clr()
 
@@ -77,9 +75,9 @@ def salir():
 
 
 def thank():
-    print('''\n╔══════════════════════════════╗
-║¡Gracias por usar el programa!║
-╚══════════════════════════════╝''')
+    print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                        ¡Gracias por usar el programa!                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
     slp()
     clr()
 #Joaquín Ludzcanoff, 2018

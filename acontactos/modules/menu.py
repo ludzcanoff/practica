@@ -13,7 +13,9 @@ def ppal():
     while seleccion != 0:
         clr()
         intro()
-        print('\n╔══════════════╗\n║Menú Principal║\n╚══════════════╝')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                                Menú Principal                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
         print('''\n(1) Para añadir contacto(s) a un archivo CSV.
         \n(2) Para visualizar sus contactos en un archivo CSV.
         \n(3) Para añadir contacto(s) a un archivo sin extensión.

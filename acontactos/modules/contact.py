@@ -42,9 +42,9 @@ def loop2():
 
 
 def editarcsv():
-    print('''\n╔═══════════════════════════════════╗
-║Agende contactos a un archivo *.csv║
-╚═══════════════════════════════════╝''')
+    print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                      Agende contactos a un archivo *.csv                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
     nombre = raw_input('Ingrese su nombre: ')
     apellido = raw_input('\nIngrese su apellido: ')
     telefono = raw_input('\nIngrese su número telefónico: ')
@@ -57,9 +57,9 @@ def editarcsv():
 def visualizarcsv():
     existe = os.path.isfile('contactos.csv')
     if existe is True:
-        print('''\n╔═══════════════════════════════════════╗
-║Visualize contactos en un archivo *.csv║
-╚═══════════════════════════════════════╝''')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                    Visualize contactos en un archivo *.csv                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
         archivo = open('contactos.csv', 'r')
         for line in archivo:
             linea = line.split(',')
@@ -72,16 +72,16 @@ def visualizarcsv():
             print 'Número telefónico:', telefono, '|Casilla de correo:', email
         archivo.close()
     elif existe is False:
-        print('''\n╔═══════════════════════════════════╗
-║¡El archivo de contactos no existe!║
-╚═══════════════════════════════════╝''')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                      ¡El archivo de contactos no existe!                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
         slp()
 
 
 def editar():
-    print('''\n╔═══════════════════════════════════════════╗
-║Agende contactos a un archivo sin extensión║
-╚═══════════════════════════════════════════╝''')
+    print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                  Agende contactos a un archivo sin extensión                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
     nombre = raw_input('Ingrese su nombre: ')
     apellido = raw_input('\nIngrese su apellido: ')
     telefono = raw_input('\nIngrese su número telefónico: ')
@@ -94,9 +94,9 @@ def editar():
 def visualizar():
     existe = os.path.isfile('contactos')
     if existe is True:
-        print('''\n╔═══════════════════════════════════════════════╗
-║Visualize contactos en un archivo sin extensión║
-╚═══════════════════════════════════════════════╝''')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                Visualize contactos en un archivo sin extensión               ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
         archivo = open('contactos', 'r')
         for line in archivo:
             linea = line.split(',')
@@ -109,7 +109,7 @@ def visualizar():
             print 'Número telefónico:', telefono, '|Casilla de correo:', email
         archivo.close()
     elif existe is False:
-        print('''\n╔═══════════════════════════════════╗
-║¡El archivo de contactos no existe!║
-╚═══════════════════════════════════╝''')
+        print('''\n╔══════════════════════════════════════════════════════════════════════════════╗
+║                      ¡El archivo de contactos no existe!                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
 #Joaquín Ludzcanoff, 2018
